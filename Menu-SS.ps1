@@ -22,7 +22,7 @@ function Ejecutar-Script($url, $nombre) {
         Remove-Item $tempPath -Force
     } catch {
         Write-Host ""
-        Write-Host "`n✖ Error al ejecutar $nombre:`n$($_.Exception.Message)" -ForegroundColor Red
+        Write-Host ("`n✖ Error al ejecutar {0}:`n{1}" -f $nombre, $_.Exception.Message) -ForegroundColor Red
     }
 }
 
