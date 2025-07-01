@@ -20,7 +20,8 @@ function Ejecutar-Script($url, $nombre) {
         Write-Host ""
         & powershell.exe -ExecutionPolicy Bypass -File $tempPath
         Remove-Item $tempPath -Force
-    } catch {
+    }
+    catch {
         Write-Host ""
         Write-Host ("`n✖ Error al ejecutar {0}:`n{1}" -f $nombre, $_.Exception.Message) -ForegroundColor Red
     }
